@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+:root {
+    --background-header: #eae63f;
+    --background-intro: #474de4;
+    --background-center-info: #7c9087;
+    --background-features: #9a3778;
+    --background-gallery: #583651;
+    --background-knowledge: #74e3aa;
+    --background-subscribe: #e60010;
+    --background-footer: #17e016;
+}
+
+</style>
+</head>
+<body>
+    <!-- Шапка ПК и мобильная версия -->
+    <!-- Шапка -->
+    <header class="header">
+        <div class="logo">
+            <img src="img\logo.png" alt="Логотип">
+        </div>
+        <button class="menu-toggle" aria-label="Открыть меню">&#9776;</button> <!-- Кнопка мобильного меню -->
+        <nav class="menu">
+            <a href="#onas">ABOUT US</a>
+            <a href="contact.html">CONTACTS</a>
+            <a href="#uslugi">SERVICES</a>
+        </nav>
+        <div class="social">
+            <a href="#"><img src="img\facebook.png" alt="Facebook"></a>
+        </div>
+    </header>      
+    <!-- Мобильное меню -->
+    <nav class="mobile-menu">
+        <button class="menu-close" aria-label="Закрыть меню">&times;</button> <!-- Кнопка закрытия меню -->
+        <a href="#onas">О НАС</a>
+        <a href="contact.html">КОНТАКТЫ</a>
+        <a href="#uslugi">УСЛУГИ</a>
+    </nav>
+    <!-- Блок банер с кнопкой -->
+    <section class="intro">
+        <div class="intro-left">
+            <h1>Love Your Pets
+            </h1>
+            <p>Our team of experienced specialists knows everything about the 
+                care and well-being of your beloved animals. We are ready to 
+                help you, offer advice, recommend treatments, and support you on 
+                your journey to happy pet ownership.</p>
+            <button class="item-button">
+                <a href="contact.html" style="color: inherit; text-decoration: none;">LEARN MORE</a>
+            </button>
+            
+        </div>
+        <div class="intro-right">
+            <img src="img\dog4.png" alt="Весы">
+        </div>
+    </section>
+    <!-- Блок информационный текстовый -->
+    <section class="center-info" id="onas"> 
+        <p>Our team of experienced specialists knows 
+            everything about the care and well-being 
+            of your beloved animals. We are ready to help 
+            you, offer advice, recommend treatments, 
+            and support you on your journey to happy pet 
+            ownership. Our mission is to ensure your pets 
+            are healthy, happy, and thriving by providing 
+            personalized care and practical solutions for 
+            their needs. With our expertise, we offer 
+            comprehensive guidance to enhance the quality 
+            of life for your furry companions, making pet 
+            ownership a truly rewarding experience for you
+            and your family.
+        </p>
+    </section>
+    <!-- Блок преимущества -->
+    <section id="uslugi"></section>
+    <section class="features">
+        <div class="feature">
+            <img src="img\c3.png" alt="Иконка 1">
+            <p>We provide tailored advice and recommendations to ensure your pet's unique needs are met. From nutrition and exercise to mental stimulation, we cover every aspect of their well-being to help them live a longer, healthier, and happier life.</p>
+        </div>
+        <div class="feature">
+            <img src="img\c2.png" alt="Иконка 2">
+            <p>Our team stays up-to-date with the latest veterinary research and practical strategies. Whether it’s routine care or addressing specific concerns, we’re here to guide you every step of the way with reliable and actionable advice.</p>
+        </div>
+        <div class="feature">
+            <img src="img\c1.png" alt="Иконка 3">
+            <p>Join a community of passionate pet owners, share your experiences, and discover new ways to strengthen your bond with your furry companions. Together, we can create a supportive space for learning and inspiration.</p>
+        </div>
+    </section>
+    <!-- Блок галерея -->
+    <section class="gallery">
+        <h2 class="gallery-title">GALLERY</h2>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="img\dog1.png" alt="Гиря 1">
+            </div>
+            <div class="gallery-item">
+                <img src="img\dog2.png" alt="Гиря 2">
+            </div>
+            <div class="gallery-item">
+                <img src="img\dog3.png" alt="Гиря 3">
+            </div>
+        </div>
+    </section>
+    <!-- Блок текст в две колонки -->
+<section class="two-columns">
+    <div class="column left">
+        <p>
+            Taking care of your pet goes beyond just feeding them and taking them for walks. It's about understanding their emotional needs, building a bond of trust, and ensuring they feel loved every single day. Pets bring joy, companionship, and comfort into our lives, and they deserve the best we can offer in return.
+        </p>
+    </div>
+    <div class="column right">
+        <p>
+            Every wagging tail, gentle purr, or happy chirp is a reminder of the unconditional love our pets give us. By prioritizing their well-being and learning more about their unique needs, we strengthen the connection we share. Together, we create a life full of health, happiness, and unforgettable moments.
+        </p>
+    </div>
+</section>
+    <!-- Блок текст + баннер -->
+    <section class="text-banner">
+        <div class="text-content">
+            <h2>Your Pet's Happiness Matters</h2>
+            <p>
+                Every moment with your furry friend is a gift, filled with joy and unconditional love. Ensuring their happiness means creating an environment where they feel safe, cared for, and deeply cherished. Whether it's daily walks, playful interactions, or simply spending quiet moments together, every little effort contributes to their well-being.
+            </p>
+        </div>
+        <div class="image-banner">
+            <img src="img\cat.png" alt="Описание баннера">
+        </div>
+    </section>
+    <!-- Блок описание и фото 1-->
+    <section class="description-image">
+        <div class="text-content">
+            <p>
+                Your pet's happiness is a reflection of the love and care you provide. From their wagging tails to their gentle purrs, each moment spent with them creates a bond that lasts a lifetime. Celebrate these moments by giving them the attention and affection they deserve—they’re not just pets; they’re family.
+            </p>
+        </div>
+        <div class="image-content">
+            <img src="img\dog.png" alt="Описание изображения">
+        </div>
+    </section>
+    <!-- Блок описание и фото 2-->
+    <section class="description-image-reverse">
+        <div class="image-content">
+            <img src="img\cat4.png" alt="Описание изображения">
+        </div>
+        <div class="text-content">
+            <p>
+                A healthy pet is a happy pet. Providing nutritious meals, regular check-ups, and plenty of exercise ensures they thrive both physically and emotionally. Their joy shines brightest when they feel their best, so invest in their well-being and watch their love for you grow even stronger.
+            </p>
+        </div>
+    </section>
+    <!-- Блок Информационный текстовый с заголовком -->
+    <section class="article-block">
+        <div class="article-title">
+            <h2>Unconditional Love,<br>Unlimited Joy</h2>
+        </div>
+        <div class="article-text">
+            <p>
+                Our pets teach us the true meaning of unconditional love. They’re there for us in every moment, bringing joy and comfort into our lives. Let’s cherish their loyalty by creating a world where they feel loved, safe, and appreciated every single day.
+            </p>
+        </div>
+    </section>
+    <!-- Блок колонка автора-->
+    <section class="knowledge">
+        <h2>A Trusted Companion in Every Step</h2>
+        <div class="knowledge-content">
+            <div class="knowledge-image">
+                <img src="img\cat3.png" alt="Изображение">
+            </div>
+            <div class="knowledge-text">
+                <p>Our pets are more than animals; they are family. They stand by us through every high and low, offering unwavering companionship. By prioritizing their health, happiness, and well-being, we create a bond that strengthens with each shared moment, reminding us of the beauty of unconditional love.</p>
+            </div>
+        </div>
+    </section>
+       <!-- Блок форма заявки -->
+       <section class="subscribe-section">
+        <div class="subscribe-container">
+            <h2 class="subscribe-title">Sign up for our newsletter</h2>
+            <p class="subscribe-description">Get the latest updates, tips, and exclusive offers delivered straight to your inbox.
+            </p>
+            <form class="subscribe-form">
+                <input type="email" class="subscribe-input" placeholder="YOUR E-MAIL" required>
+                <button type="submit" class="subscribe-button">SUBSCRIBE</button>
+            </form>
+        </div>
+    </section>
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="footer-menu">
+            <a href="contact.html">Contact Us</a>
+            <a href="terms_of_service.html">Terms of Service</a>
+            <a href="privacy_policy.html">Privacy Policy</a>
+        </div>
+        <div class="footer-logo">
+            <img src="img\logo.png" alt="Logo">
+        </div>
+    </footer>
+</body>
+</html>

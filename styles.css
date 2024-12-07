@@ -1,0 +1,916 @@
+/* Общие стили */
+/* Общий стиль для всех элементов */
+* {
+    font-family: 'Dosis', sans-serif !important;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, a, div, span, button, input {
+    font-family: 'Dosis', sans-serif !important;
+}
+
+.header, .menu a, .intro, .features, .knowledge, .footer {
+    font-family: 'Dosis', sans-serif !important;
+}
+
+
+.intro p {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 400;
+}
+
+.knowledge, .features, .center-info {
+    font-family: 'Dosis', sans-serif;
+}
+
+
+
+@font-face {
+    font-family: 'Dosis';
+    src: url('./fonts/Dosis-Regular.ttf') format('truetype'); /* Подключение обычного шрифта */
+    font-weight: 400; /* Нормальный вес */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Dosis';
+    src: url('./fonts/Dosis-Bold.ttf') format('truetype'); /* Подключение полужирного шрифта */
+    font-weight: 700; /* Полужирный вес */
+    font-style: normal;
+}
+
+* {
+    font-family: 'Dosis', sans-serif;
+}
+
+
+body {
+    font-family: 'Dosis', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700; /* Использование полужирного шрифта */
+}
+
+p {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 400; /* Использование обычного шрифта */
+}
+
+
+* {
+    font-family: 'Dosis', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+/* Шапка */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: var(--background-header);
+    height: 80px;
+}
+
+.header .logo img {
+    height: 50px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.social {
+    display: flex;
+    align-items: center; /* Центрирование иконки */
+}
+
+.social img {
+    height: 30px;
+    width: auto;
+}
+
+/* Медиа-запросы для мобильной версии */
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* Скрываем стандартное меню */
+    }
+    .social {
+        display: none; /* Скрываем иконку в мобильной версии */
+    }
+}
+
+
+/* Основной блок */
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: var(--background-intro);
+    height: 500px;
+    overflow: hidden; /* Убираем выход за границы */
+}
+
+.intro-left {
+    max-width: 50%; /* Левая часть занимает до 50% ширины */
+    word-wrap: break-word; /* Перенос слов для текста */
+}
+
+.intro-left h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.intro-left p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.intro-left .item {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.intro-right {
+    max-width: 50%; /* Правая часть ограничена 50% */
+    overflow: hidden;
+}
+
+.intro-right img {
+    max-width: 100%; /* Изображение вписывается в контейнер */
+    height: auto; /* Пропорциональное масштабирование */
+    display: block;
+}
+
+/* Центральный текстовый блок */
+.center-info {
+    padding: 40px; /* Увеличим отступы для визуального соответствия */
+    background-color: var(--background-center-info);
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.6;
+    height: 400px; /* Устанавливаем такую же высоту, как у .knowledge */
+    display: flex; /* Центрируем текст внутри блока */
+    justify-content: center; /* Горизонтальное центрирование */
+    align-items: center; /* Вертикальное центрирование */
+}
+
+
+
+/* Блок функций */
+.features {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    padding: 40px 0;
+    margin: 0 auto;
+    background-color: var(--background-features);
+    gap: 20px;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+    overflow: hidden; /* Убираем выходящие элементы */
+}
+
+
+
+.feature {
+    text-align: center;
+    flex: 1; /* Позволяет каждому блоку растягиваться равномерно */
+    display: flex;
+    flex-direction: column; /* Располагаем элементы внутри вертикально */
+    align-items: center; /* Центрируем содержимое по горизонтали */
+    justify-content: flex-start; /* Выравнивание содержимого сверху */
+    padding: 20px; /* Внутренний отступ каждого элемента */
+    background-color: #e5b8ff; /* Белый фон для каждого блока */
+    border-radius: 10px; /* Скругленные углы */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Тень для визуальной отделенности */
+}
+
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column; /* Переводим блоки в столбик */
+        padding: 10px; /* Уменьшаем отступы */
+        gap: 15px; /* Добавляем небольшое расстояние между блоками */
+        min-height: auto; /* Убираем фиксированную высоту */
+    }
+}
+
+
+.feature img {
+    width: 70px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 16px;
+    line-height: 1.5; /* Улучшаем читаемость текста */
+    color: #333; /* Цвет текста */
+    word-wrap: break-word; /* Перенос слов, если текст слишком длинный */
+}
+
+
+
+.item-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #303e9f; /* Темно-синий фон */
+    border: none;
+    border-radius: 5px; /* Скругленные углы */
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase; /* Текст в верхнем регистре */
+    transition: background-color 0.3s ease; /* Анимация при наведении */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+.item-button:hover {
+    background-color: #45a049; /* Более темный зеленый при наведении */
+}
+
+/* Если кнопка является ссылкой (a внутри кнопки), задаем стили для ссылки */
+.item-button a {
+    color: inherit; /* Цвет текста унаследован */
+    text-decoration: none; /* Убираем подчеркивание */
+    display: block; /* Расширяем ссылку до размеров кнопки */
+}
+
+
+
+/* Знания */
+.knowledge {
+    background-color: var(--background-knowledge);
+    padding: 40px;
+    text-align: center;
+    height: 400px;
+    display: flex;
+    flex-direction: column; /* Элементы располагаются вертикально */
+    justify-content: center; /* Центрируем по вертикали */
+    align-items: center; /* Центрируем по горизонтали */
+    gap: 20px; /* Добавляем расстояние между элементами */
+}
+
+.knowledge-content {
+    display: flex;
+    justify-content: center; /* Центрируем содержимое */
+    align-items: center; /* Центрируем по вертикали */
+    gap: 20px; /* Отступ между изображением и текстом */
+}
+
+.knowledge-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Круглое изображение */
+}
+
+.knowledge-text {
+    max-width: 600px;
+    text-align: left; /* Выравнивание текста внутри блока */
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/* Футер */
+/* Общий стиль футера */
+.footer {
+    display: flex;
+    flex-direction: column; /* Располагаем элементы вертикально */
+    align-items: center; /* Центрируем содержимое */
+    justify-content: center; /* Центрируем по вертикали */
+    padding: 20px;
+    background-color: var(--background-footer);
+    color: white;
+    gap: 20px; /* Расстояние между элементами */
+}
+
+/* Ссылки в футере */
+.footer-menu {
+    display: flex;
+    flex-direction: row; /* Располагаем ссылки в одну строку */
+    gap: 20px; /* Расстояние между ссылками */
+}
+
+.footer-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.footer-menu a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+/* Логотип */
+.footer-logo img {
+    width: 80px; /* Ширина логотипа */
+    height: auto; /* Автоматическое соотношение сторон */
+}
+
+/* Адаптивная версия */
+@media (max-width: 768px) {
+    .footer-menu {
+        flex-direction: column; /* Переводим ссылки в столбик на мобильных устройствах */
+        text-align: center; /* Центрируем текст */
+    }
+
+    .footer-logo img {
+        width: 60px; /* Уменьшаем размер логотипа */
+    }
+}
+
+
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+    display: none; /* Баннер скрыт по умолчанию */
+}
+
+.cookie-banner a {
+    color: #4caf50;
+    text-decoration: underline;
+}
+
+.cookie-button {
+    margin-left: 20px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cookie-button:hover {
+    background-color: #45a049;
+}
+
+/* Скрываем мобильное меню по умолчанию */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Убираем за пределы экрана */
+    width: 250px;
+    height: 100%;
+    background-color: #303e9f; /* Устанавливаем фон меню */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    transition: right 0.3s ease; /* Добавляем анимацию */
+    z-index: 1000;
+}
+
+/* Открытое состояние мобильного меню */
+.mobile-menu.open {
+    right: 0; /* Показываем меню */
+}
+
+/* Кнопка открытия меню */
+.menu-toggle {
+    display: none; /* Скрываем кнопку на десктопах */
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: black; /* Черный цвет иконки кнопки */
+    cursor: pointer;
+    z-index: 1001; /* Поверх меню */
+}
+
+/* Кнопка закрытия меню */
+.menu-close {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white; /* Белый цвет кнопки закрытия */
+    cursor: pointer;
+    align-self: flex-end;
+    margin-bottom: 20px;
+}
+
+/* Стили ссылок в мобильном меню */
+.mobile-menu a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: white; /* Белый цвет текста ссылок */
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px; /* Отступ между ссылками */
+    display: block;
+}
+
+/* Делаем кнопку видимой на мобильных устройствах */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Показываем кнопку на мобильных */
+    }
+
+    .menu {
+        display: none; /* Скрываем десктопное меню */
+    }
+
+    .social {
+        display: none; /* Скрываем социальные иконки на мобильных */
+    }
+}
+
+
+
+/* Блок подписки */
+.subscribe-section {
+    background-color: var(--background-subscribe);
+    padding: 40px 20px;
+    text-align: center;
+    min-height: 400px; /* Совпадение по высоте с другими блоками */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Центрируем элементы по вертикали */
+}
+
+.subscribe-container {
+    max-width: 800px; /* Ограничиваем ширину контейнера */
+    margin: 0 auto;
+}
+
+.subscribe-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.subscribe-description {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center; /* Центрируем форму */
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+/* Поле ввода email */
+.subscribe-input {
+    flex: none; /* Убираем растяжение */
+    width: 400px; /* Устанавливаем удобную ширину на ПК */
+    padding: 15px; /* Отступы внутри поля */
+    font-size: 16px;
+    border: 2px solid #000;
+    border-radius: 0; /* Убираем скругления */
+    outline: none;
+    text-transform: uppercase;
+    box-shadow: none;
+}
+
+.subscribe-input::placeholder {
+    color: #ccc;
+    font-style: italic;
+}
+
+.subscribe-button {
+    background-color: #003366;
+    color: #fff;
+    border: none;
+    padding: 15px 30px; /* Уменьшена ширина кнопки */
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.subscribe-button:hover {
+    background-color: #001f4d;
+    color: #fff;
+}
+
+/* Адаптивные стили для мобильной версии */
+@media (max-width: 768px) {
+    .subscribe-section {
+        padding: 20px;
+        min-height: auto; /* Убираем фиксированную высоту */
+    }
+
+    .subscribe-container {
+        max-width: 100%; /* Увеличиваем ширину до полной */
+    }
+
+    .subscribe-title {
+        font-size: 24px; /* Уменьшаем размер заголовка */
+        margin-bottom: 10px;
+    }
+
+    .subscribe-description {
+        font-size: 14px; /* Уменьшаем описание */
+        margin-bottom: 20px;
+    }
+
+    .subscribe-form {
+        flex-direction: column; /* Переводим элементы в столбик */
+        gap: 15px; /* Добавляем отступы между элементами */
+    }
+
+    .subscribe-input {
+        width: 100%; /* Растягиваем поле ввода на всю ширину */
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .subscribe-button {
+        padding: 15px 30px; /* Уменьшаем размер кнопки */
+        font-size: 14px;
+    }
+}
+
+
+/* Блок галереи */
+/* Общий стиль галереи */
+.gallery {
+    background-color: var(--background-gallery);
+    padding: 40px 20px; /* Отступы */
+    text-align: center;
+}
+
+.gallery-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px; /* Расстояние между элементами */
+    flex-wrap: wrap; /* Перенос элементов на новую строку */
+}
+
+.gallery-item {
+    flex: 1 1 calc(30% - 20px); /* Элементы занимают 30% ширины с учетом отступов */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Обрезаем изображение по контейнеру */
+    border-radius: 20px; /* Скругленные углы */
+    background-color: #fff; /* Фон для fallback */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Тень */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Обрезка по контейнеру */
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+    .gallery-item {
+        flex: 1 1 100%; /* Каждый элемент занимает всю ширину */
+        height: 200px; /* Устанавливаем фиксированную высоту для квадратной формы */
+    }
+
+    .gallery-item img {
+        width: 100%; /* Изображение растягивается по ширине */
+        height: 100%; /* Изображение растягивается по высоте контейнера */
+        object-fit: cover; /* Изображение обрезается по центру */
+    }
+}
+
+
+
+/* Общий стиль блока */
+.text-image-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+    background-color: #f9f9f9; /* Фон для визуального разделения */
+}
+
+/* Общий стиль для блока */
+.text-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #f9f9f9; /* Фон блока */
+    gap: 20px; /* Расстояние между текстом и баннером */
+}
+
+/* Блок с текстом */
+.text-content {
+    text-align: center;
+    padding: 20px;
+    max-width: 800px; /* Ограничиваем ширину текста */
+    box-sizing: border-box;
+}
+
+.text-content h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.text-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Блок с изображением */
+.image-banner {
+    width: 100%; /* Изображение занимает всю ширину */
+}
+
+.image-banner img {
+    width: 100%; /* Изображение растягивается на всю ширину */
+    height: auto; /* Сохраняем пропорции */
+    border-radius: 10px; /* Скругленные углы */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Тень для изображения */
+    object-fit: cover; /* Изображение адаптируется под контейнер */
+}
+
+/* Адаптивная версия */
+@media (max-width: 768px) {
+    .text-content {
+        padding: 15px;
+    }
+
+    .text-content h2 {
+        font-size: 24px; /* Уменьшаем размер заголовка */
+    }
+
+    .text-content p {
+        font-size: 14px; /* Уменьшаем размер текста */
+    }
+}
+
+/* Общий стиль для секции */
+.description-image {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    background-color: #f9f9f9; /* Фон для разделения */
+    gap: 20px; /* Расстояние между текстом и изображением */
+}
+
+/* Блок с текстом */
+.text-content {
+    flex: 1; /* Текст занимает доступное пространство */
+    max-width: 50%; /* Ограничиваем максимальную ширину текста */
+    padding: 20px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.text-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Блок с изображением */
+.image-content {
+    flex: 1; /* Изображение занимает оставшееся пространство */
+    max-width: 50%; /* Ограничиваем максимальную ширину изображения */
+    display: flex;
+    justify-content: center;
+}
+
+.image-content img {
+    width: 100%; /* Изображение растягивается на всю ширину блока */
+    height: auto; /* Сохраняем пропорции */
+    border-radius: 10px; /* Скругленные углы */
+    object-fit: cover; /* Изображение адаптируется по размеру блока */
+}
+
+/* Адаптивная версия */
+@media (max-width: 768px) {
+    .description-image {
+        flex-direction: column; /* Переводим блоки в вертикальное положение */
+        text-align: center; /* Центрируем текст */
+    }
+
+    .text-content {
+        max-width: 100%; /* Текст занимает всю ширину */
+        padding: 10px; /* Уменьшаем отступы */
+    }
+
+    .image-content {
+        max-width: 100%; /* Изображение занимает всю ширину */
+    }
+}
+
+/* Общий стиль для секции */
+.description-image-reverse {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    background-color: #f9f9f9; /* Фон для разделения */
+    gap: 20px; /* Расстояние между текстом и изображением */
+}
+
+/* Блок с изображением */
+.image-content {
+    flex: 1; /* Изображение занимает доступное пространство */
+    max-width: 50%; /* Ограничиваем максимальную ширину изображения */
+    display: flex;
+    justify-content: center;
+}
+
+.image-content img {
+    width: 100%; /* Изображение растягивается на всю ширину блока */
+    height: auto; /* Сохраняем пропорции */
+    border-radius: 10px; /* Скругленные углы */
+    object-fit: cover; /* Изображение адаптируется по размеру блока */
+}
+
+/* Блок с текстом */
+.text-content {
+    flex: 1; /* Текст занимает оставшееся пространство */
+    max-width: 50%; /* Ограничиваем максимальную ширину текста */
+    padding: 20px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.text-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Адаптивная версия */
+@media (max-width: 768px) {
+    .description-image-reverse {
+        flex-direction: column; /* Переводим блоки в вертикальное положение */
+        text-align: center; /* Центрируем текст */
+    }
+
+    .image-content {
+        max-width: 100%; /* Изображение занимает всю ширину */
+    }
+
+    .text-content {
+        max-width: 100%; /* Текст занимает всю ширину */
+        padding: 10px; /* Уменьшаем отступы */
+    }
+}
+
+
+/* Общий стиль для двух колонок */
+.two-columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Колонки будут одинаковой высоты */
+    gap: 0; /* Убираем зазор между колонками */
+    width: 100%;
+    min-height: 400px; /* Фиксированная минимальная высота */
+}
+
+/* Левая колонка */
+.column.left {
+    flex: 1;
+    background-color: #fff7fb; /* Серый фон для левой колонки */
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Правая колонка */
+.column.right {
+    flex: 1;
+    background-color: #ffffff; /* Белый фон для правой колонки */
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Текст внутри колонок */
+.column p {
+    font-size: 18px;
+    line-height: 1.8;
+    font-weight: bold;
+    color: #333333;
+    margin: 0;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .two-columns {
+        flex-direction: column; /* Колонки располагаются вертикально */
+    }
+
+    .column {
+        flex: none;
+        width: 100%; /* Колонка занимает всю ширину */
+        min-height: 200px; /* Высота колонок на мобильных устройствах */
+    }
+}
+
+/* Общий стиль для секции */
+.article-block {
+    display: flex;
+    align-items: center; /* Центрируем элементы по вертикали */
+    justify-content: center; /* Центрируем по горизонтали */
+    padding: 40px;
+    gap: 40px; /* Расстояние между заголовком и текстом */
+    background-color: var(--background-article-block);
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 400px; /* Минимальная высота */
+    text-align: center; /* Текст выравнивается по центру */
+}
+
+/* Стиль заголовка */
+.article-title {
+    flex: 1; /* Заголовок занимает одну часть */
+    text-align: center; /* Центрируем заголовок */
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.article-title h2 {
+    margin: 0;
+}
+
+/* Стиль текста */
+.article-text {
+    flex: 2; /* Текстовая часть занимает больше пространства */
+    text-align: left; /* Выравнивание текста */
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.article-text p {
+    margin: 0;
+    word-wrap: break-word; /* Перенос слов, если текст слишком длинный */
+}
+
+/* Адаптивная версия */
+@media (max-width: 768px) {
+    .article-block {
+        flex-direction: column; /* Элементы располагаются вертикально */
+        text-align: center; /* Центрируем текст */
+    }
+
+    .article-title, .article-text {
+        flex: none;
+        width: 100%; /* Элементы растягиваются на всю ширину */
+    }
+
+    .article-text {
+        text-align: center; /* Центрируем текст */
+    }
+}
